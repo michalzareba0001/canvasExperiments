@@ -66,8 +66,8 @@ class Particle {
         this.y += this.speedY;
     }
     draw(){
-        let radius = 95;
-        ctx.fillStyle = 'black';
+        let radius = Math.random() * 50 + 1;
+        ctx.fillStyle = 'red';
         ctx.strokeStyle = 'red';
         ctx.lineWidth = 0;
         ctx.beginPath();

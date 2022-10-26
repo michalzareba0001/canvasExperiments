@@ -26,9 +26,7 @@ canvas.addEventListener('click', function (event) {
 canvas.addEventListener('mousemove', function (event) { 
     mouse.x = event.x;
     mouse.y = event.y;
-    for (let i = 0; i < 10; i++) {
-        particlesArray.push(new Particle());
-        }
+   // drawCircle();
 });
 
 //function drawCircle() {
@@ -61,9 +59,9 @@ class Particle {
         this.y = mouse.y;
         //this.x = Math.random() * canvas.width;
         //this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 20 + 1;
-        this.speedX = Math.random() * 3 - 1.5;
-        this.speedY = Math.random() * 3 - 1.5;
+        this.size = Math.random() * 15 + 1;
+        this.speedX = Math.random() * 6 - 3;
+        this.speedY = Math.random() * 6 - 3;
     }
     update(){
         this.x += this.speedX;
@@ -72,8 +70,8 @@ class Particle {
     }
     draw(){
         let radius = 95;
-        ctx.fillStyle = 'magenta';
-        ctx.strokeStyle = 'magenta';
+        ctx.fillStyle = 'yellow';
+        ctx.strokeStyle = 'yellow';
         ctx.lineWidth = 0;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);

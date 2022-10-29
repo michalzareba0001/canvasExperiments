@@ -3,12 +3,16 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particlesArray = [];
+const next = document.getElementById('next');
+const prev= document.getElementById('prev');
 
 window.addEventListener('resize', function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
     drawCircle();
 });
+
 
 const mouse = {
     x: undefined,
